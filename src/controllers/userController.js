@@ -49,8 +49,6 @@ const loginToken = jwt.sign({userId:userId.toString(),expiresIn:"24hr"},"intervi
 return res.status(201).send({status:true,message:"Login Successful",data:loginToken})
 
 
-
-
     } catch (error) {
         return res.status(500).send({status:false,message:error.message})
     }
@@ -58,4 +56,22 @@ return res.status(201).send({status:true,message:"Login Successful",data:loginTo
 
 }
 
+
+const updateUser=async()=>{
+
+    try {
+        let userId=req.params.userId
+        let data =req.body
+        let Id=req.userId
+         if(userId!==Id){
+            return res.status(403).send({status:false,message:"You are not authorised to perform this operation"})
+         }
+
+const Update= await userModel.findOneAndUpdate({userId:userId},{$set:data})
+
+
+    } catch (error) {
+        return res.status(400).send({status:false,message:error.message})
+    }
+}
 module.exports={createUser,loginUser}
