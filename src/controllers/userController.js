@@ -69,9 +69,11 @@ const updateUser=async()=>{
 
 const Update= await userModel.findOneAndUpdate({userId:userId},{$set:data})
 
+return res.status(200).send({status:true,message:"User information updated succesfully"})
+
 
     } catch (error) {
         return res.status(400).send({status:false,message:error.message})
     }
 }
-module.exports={createUser,loginUser}
+module.exports={createUser,loginUser,updateUser}

@@ -12,4 +12,4 @@ const changeVerifyStatus= await userModel.findOneAndUpdate({userId:req.userId},{
     return res.status(200).send({status:true,message:"Verification process complete Thank You!!"})
 }
 
-module.export={verifyUser}
+module.exports={verifyUser}
