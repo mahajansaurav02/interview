@@ -1,0 +1,24 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "description": "interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahajansaurav02/interview.git"
+  },
+  "author": "saurav Mahajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahajansaurav02/interview/issues"
+  },
+  "homepage": "https://github.com/mahajansaurav02/interview#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "json-web-token": "^3.2.0",
+    "mongoose": "^6.9.0"
+  }
+}
